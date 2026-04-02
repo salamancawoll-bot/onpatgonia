@@ -1,150 +1,176 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Asesoría Financiera Inteligente</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patagonia E-Bank | Asesoría en Línea</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --azul-patagonia: #004a99;
+            --rojo-patagonia: #e30613;
+            --gris-fondo: #f4f4f4;
+            --texto: #333;
+        }
 
-<style>
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    color: #1a1a1a;
-}
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--gris-fondo);
+            color: var(--texto);
+        }
 
-/* HERO */
-.hero {
-    background: linear-gradient(120deg, #0a2540, #1d4ed8);
-    color: white;
-    padding: 100px 20px;
-    text-align: center;
-}
+        /* Header Estilo Patagonia */
+        header {
+            background-color: #fff;
+            border-bottom: 4px solid var(--rojo-patagonia);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
 
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
+        .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--azul-patagonia);
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
 
-.hero p {
-    font-size: 20px;
-    margin-bottom: 30px;
-}
+        .logo span {
+            color: var(--rojo-patagonia);
+        }
 
-.btn {
-    background: #00c853;
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    cursor: pointer;
-}
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 74, 153, 0.8), rgba(0, 74, 153, 0.8)), 
+                        url('https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&q=80&w=1000');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 60px 5%;
+            text-align: center;
+        }
 
-/* SECCIONES */
-.section {
-    padding: 80px 20px;
-    text-align: center;
-}
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
 
-.cards {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 25px;
+        }
 
-.card {
-    background: #f5f7fa;
-    padding: 30px;
-    border-radius: 10px;
-    width: 300px;
-}
+        /* Contenido Principal */
+        .container {
+            max-width: 1100px;
+            margin: -40px auto 40px;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
 
-.card h3 {
-    color: #1d4ed8;
-}
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
 
-/* CTA */
-.cta {
-    background: #1d4ed8;
-    color: white;
-    padding: 60px 20px;
-}
+        .card {
+            border-top: 5px solid var(--azul-patagonia);
+            padding: 20px;
+            background: #fafafa;
+            border-radius: 4px;
+        }
 
-/* FOOTER */
-.footer {
-    background: #0a2540;
-    color: white;
-    padding: 30px;
-    text-align: center;
-}
-</style>
+        .card h3 {
+            color: var(--azul-patagonia);
+            margin-top: 0;
+        }
 
+        /* Botones */
+        .btn-primary {
+            background-color: var(--rojo-patagonia);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #b3050f;
+        }
+
+        .badge {
+            background: var(--azul-patagonia);
+            color: white;
+            padding: 5px 10px;
+            font-size: 0.8rem;
+            border-radius: 3px;
+            text-transform: uppercase;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
 </head>
-
 <body>
 
-<!-- HERO -->
+<header>
+    <div class="logo">BANCO <span>PATAGONIA</span></div>
+    <nav>
+        <span class="badge">E-Bank Personas</span>
+    </nav>
+</header>
+
 <section class="hero">
-    <h1>Transforma tus finanzas hoy</h1>
-    <p>Asesoría financiera personalizada para crecer, invertir y proteger tu patrimonio.</p>
-    <button class="btn">Agenda tu asesoría gratis</button>
+    <h1>Tu banco, donde estés.</h1>
+    <p>Conoce nuestro servicio de <strong>Asesoría en Línea</strong>. Expertos listos para ayudarte a gestionar tus finanzas sin moverte de casa.</p>
+    <a href="#" class="btn-primary">INGRESAR A E-BANK</a>
 </section>
 
-<!-- SERVICIOS -->
-<section class="section">
-    <h2>Nuestros servicios</h2>
-
-    <div class="cards">
+<div class="container">
+    <h2>Asesoría Digital 24/7</h2>
+    <p>En Patagonia E-Bank, hemos evolucionado para brindarte una experiencia más humana en un entorno digital. Nuestros asesores están disponibles para guiarte en cada paso.</p>
+    
+    <div class="grid">
         <div class="card">
-            <h3>Planificación financiera</h3>
-            <p>Diseñamos estrategias claras para alcanzar tus metas económicas.</p>
+            <h3>Gestión de Cuentas</h3>
+            <p>Recibe asistencia técnica para transferencias, pagos de servicios y configuración de claves de seguridad de forma inmediata.</p>
         </div>
-
         <div class="card">
-            <h3>Inversiones inteligentes</h3>
-            <p>Haz crecer tu dinero con asesoría profesional y segura.</p>
+            <h3>Inversiones</h3>
+            <p>Consulta con especialistas sobre Plazos Fijos, Fondos Comunes de Inversión y compra de moneda extranjera.</p>
         </div>
-
         <div class="card">
-            <h3>Reducción de deudas</h3>
-            <p>Optimiza tus finanzas y elimina deudas de forma estratégica.</p>
+            <h3>Préstamos y Créditos</h3>
+            <p>Calcula tu préstamo personal o solicita una tarjeta de crédito con asesoramiento personalizado según tu perfil.</p>
         </div>
     </div>
-</section>
 
-<!-- BENEFICIOS -->
-<section class="section">
-    <h2>¿Por qué elegirnos?</h2>
-
-    <div class="cards">
-        <div class="card">
-            <h3>100% personalizado</h3>
-            <p>Planes adaptados a tu realidad financiera.</p>
-        </div>
-
-        <div class="card">
-            <h3>Expertos certificados</h3>
-            <p>Equipo con experiencia en finanzas e inversión.</p>
-        </div>
-
-        <div class="card">
-            <h3>Resultados reales</h3>
-            <p>Mejora tu estabilidad financiera desde el primer mes.</p>
-        </div>
+    <div style="margin-top: 40px; text-align: center; border-top: 1px solid #ddd; padding-top: 30px;">
+        <h3>¿Necesitas ayuda ahora?</h3>
+        <p>Inicia un chat seguro dentro de tu sesión de E-Bank o llámanos al 0810-888-8500.</p>
     </div>
-</section>
+</div>
 
-<!-- CTA FINAL -->
-<section class="cta">
-    <h2>Empieza hoy a tomar el control de tu dinero</h2>
-    <p>Agenda tu primera asesoría gratuita y crea tu plan financiero.</p>
-    <button class="btn">Quiero empezar</button>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-    <p>© 2026 Asesoría Financiera | Todos los derechos reservados</p>
+<footer>
+    &copy; 2026 Banco Patagonia S.A. Todos los derechos reservados. <br>
+    <small>El uso de este sitio implica la aceptación de los Términos y Condiciones.</small>
 </footer>
 
 </body>
